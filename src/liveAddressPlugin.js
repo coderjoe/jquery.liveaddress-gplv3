@@ -33,6 +33,7 @@ function liveAddress($, window, document) {
 		autocomplete: 10, // Number of autocomplete suggestions; set to 0 or false to disable
 		requestUrlInternational: "https://international-street.api.smartystreets.com/verify", // International API endpoint
 		requestUrlUS: "https://us-street.api.smartystreets.com/street-address", // US API endpoint
+		requrestUrlAutocomplete: "https://us-autocomplete.api.smartystreets.com/suggest", // US Autocomplete API endpoint
 		timeout: 5000, // How long to wait before the request times out (5000 = 5 seconds)
 		speed: "medium", // Animation speed
 		ambiguousMessage: "Matched multiple addresses.<br>which did you mean?", // Message when address is ambiguous
@@ -120,6 +121,7 @@ function liveAddress($, window, document) {
 		config.submitSelector = config.submitSelector || defaults.submitSelector;
 		config.requestUrlInternational = config.requestUrlInternational || defaults.requestUrlInternational;
 		config.requestUrlUS = config.requestUrlUS || defaults.requestUrlUS;
+		config.requestUrlAutocomplete = config.requestUrlAutocomplete || defaults.requestUrlAutocomplete;
 		config.autocomplete = typeof config.autocomplete === "undefined" ? defaults.autocomplete : config.autocomplete;
 		config.cityFilter = typeof config.cityFilter === "undefined" ? "" : config.cityFilter;
 		config.stateFilter = typeof config.stateFilter === "undefined" ? "" : config.stateFilter;
@@ -971,7 +973,7 @@ function liveAddress($, window, document) {
 			autocplRequests[autocplrequest.number] = autocplrequest;
 
 			var ajaxSettings = {
-				url: "https://us-autocomplete.api.smartystreets.com/suggest",
+				url: config.requrestUrlAutocomplete,
 				traditional: true,
 				dataType: "json",
 				data: {
