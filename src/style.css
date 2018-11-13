@@ -1,0 +1,239 @@
+.smarty-dots {
+	background-image: url("data:image/gif;base64,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");
+	display: none;
+	height: 8px;
+	position: absolute;
+	width: 24px;
+	z-index: 999;
+}
+
+.smarty-ui {
+	position: absolute;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: none;
+	z-index: 999;
+}
+
+.smarty-popup {
+	background: #FFFFFF;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: inline-block;
+	padding: 20px 30px;
+}
+
+.smarty-popup-header {
+	color: #CEA737;
+	font: bold 10pt/1em \"Helvetica\", sans-serif;
+	padding: 12px 0 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.smarty-popup-ambiguous-header {
+	color: #CEA737;
+}
+
+.smarty-popup-invalid-header {
+	color: #D0021B;
+}
+
+.smarty-popup-missing-input-header {
+	color: #CEA737;
+}
+
+.smarty-popup-typed-address {
+	font-family: sans-serif;
+	font-size: 10pt;
+	margin: 15px 0;
+	text-align: center;
+	font-style: italic;
+}
+
+.smarty-popup-secondary-number-form {
+	background: none;
+	border: none;
+	float: none;
+	font-family: sans-serif;
+	margin: 10px auto 20px;
+	padding: 0;
+	text-align: center;
+	width: auto;
+}
+
+#smarty-popup-secondary-number-input-box {
+	font-size: 11pt;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 200px;
+}
+
+#smarty-popup-secondary-number-form-submit-button {
+	background: #606060;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 11pt;
+	line-height: 23px;
+	padding: 2px 15px;
+	width: 215px;
+}
+
+#smarty-popup-secondary-number-form-submit-button:hover {
+	background: #333;
+}
+
+.smarty-hr {
+	margin-bottom: 15px;
+}
+
+.smarty-choice-list .smarty-choice {
+	background: #FFF;
+	color: #9B9B9B;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+.smarty-choice {
+	border: 1px solid #D4D4D4;
+	display: block;
+	font: 300 10pt/1em sans-serif;
+	text-decoration: none;
+}
+
+.smarty-choice-list .smarty-choice:hover {
+	background: #F7F7F7;
+	border: 1px solid #333;
+	color: #333;
+	text-decoration: none;
+}
+
+.smarty-choice-alt {
+	background: inherit;
+	clear: both;
+}
+
+.smarty-choice-alt .smarty-choice-abort, .smarty-choice-override {
+	background: #606060;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+	font-size: 10pt;
+	text-decoration: none;
+	padding: 8px 10px;
+}
+
+.smarty-choice-override {
+	float: right
+}
+
+.smarty-choice-abort {
+	float: left
+}
+
+.smarty-choice-alt .smarty-choice:first-child {
+	border-top: 0;
+}
+
+.smarty-choice-abort:hover {
+	background: #333;
+}
+
+.smarty-choice-override:hover {
+	background: #333;
+}
+
+.smarty-tag {
+	border-radius: 25px;
+	display: block;
+	font: 15px/1.2em sans-serif;
+	height: 18px;
+	overflow: hidden;
+	position: absolute;
+	text-decoration: none;
+	transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	width: 20px;
+}
+
+.smarty-tag:hover {
+	color: #999;
+	text-decoration: none;
+	width: 70px;
+}
+
+.smarty-tag:hover .smarty-tag-text {
+	color: #000;
+}
+
+.smarty-tag-grayed {
+	background: #DDD;
+	border: 1px solid #B4B4B4;
+	box-shadow: inset 0 9px 15px #FFF;
+	color: #999;
+}
+
+.smarty-tag-green {
+	background: #A6D187;
+	border: 1px solid #407513;
+	box-shadow: inset 0 9px 15px #E3F6D5;
+	color: #407513;
+}
+
+.smarty-tag-grayed:hover {
+	border-color: #333;
+}
+
+.smarty-tag-check {
+	padding-left: 4px;
+	text-decoration: none;
+}
+
+.smarty-tag-text {
+	font-size: 12px;
+	left: 16px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 50px;
+}
+
+.smarty-autocomplete {
+	background: white;
+	border: 1px solid #777;
+	box-shadow: 1px 1px 3px #555;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.smarty-suggestion {
+	color: #444;
+	display: block;
+	font-size: 12px;
+	padding: 1px 5px;
+	text-decoration: none;
+}
+
+.smarty-active-suggestion {
+	background: #EEE;
+	border: none;
+	color: #000;
+	outline: none;
+}
+
+.smarty-no-suggestions {
+	color: #AAA;
+	font-size: 12px;
+	font-style: italic;
+	padding: 1px 5px;
+}
+
+.smarty-debug-input {
+	background: #ffffcc !important;
+}
+
+.smarty-debug-button {
+	color: #4ba341 !important;
+}
