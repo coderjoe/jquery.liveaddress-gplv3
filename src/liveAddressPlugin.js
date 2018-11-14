@@ -35,6 +35,7 @@ function liveAddress($, window, document) {
 		requestUrlUS: "https://us-street.api.smartystreets.com/street-address", // US API endpoint
 		timeout: 5000, // How long to wait before the request times out (5000 = 5 seconds)
 		speed: "medium", // Animation speed
+		needMoreInputMessage: "Type more for address suggestions",
 		ambiguousMessage: "Matched multiple addresses.<br>which did you mean?", // Message when address is ambiguous
 		invalidMessage: "You entered an unknown address:", // Message when address is invalid
 		invalidCountryMessage: "Unknown country", // Message when the country is invalid
@@ -108,6 +109,7 @@ function liveAddress($, window, document) {
 		config.autoVerify = config.autoVerify !== true && config.autoVerify !== false ? true : config.autoVerify;
 		config.submitVerify = typeof config.submitVerify === "undefined" ? true : config.submitVerify;
 		config.timeout = config.timeout || defaults.timeout;
+		config.needMoreInputMessage = config.needMoreInputMessage || defaults.needMoreInputMessage;
 		config.ambiguousMessage = config.ambiguousMessage || defaults.ambiguousMessage;
 		config.invalidMessage = config.invalidMessage || defaults.invalidMessage;
 		config.invalidCountryMessage = config.invalidCountryMessage || defaults.invalidCountryMessage;
@@ -938,13 +940,7 @@ function liveAddress($, window, document) {
 					}
 
 					if (config.waitForStreet && filtering == false) {
-						var message = "";
-						if (config.stateFilter || config.cityFilter || config.geolocate || config.cityStatePreference) {
-							message = "filtered";
-						} else {
-							message = "address";
-						}
-						data.suggContainer.html("<div class=\"smarty-no-suggestions\">Type more for " + message + " suggestions</div>")
+						data.suggContainer.html("<div class=\"smarty-no-suggestions\">" + config.needMoreInputMessage + "</div>")
 					} else {
 						for (var j = 0; j < json.suggestions.length; j++) {
 							var suggAddr = json.suggestions[j].text.replace(/<|>/g, "");
