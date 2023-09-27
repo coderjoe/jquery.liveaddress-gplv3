@@ -1,3 +1,15 @@
+A Note about this repository fork and the archive status
+========================================================
+
+I (coderjoe) am not maintaining this repository. 
+Upon review of my forks I realized that the upstream repository had been pruned back to
+2012 to remove and revert the repository's original swap from MIT license to GPLv3.
+As a result I have chosen to archive this repository so the original GPLv3 licensed work
+by all the contributors can be found by people in the future.
+
+The original repo was changed from MIT to GPLv3 via its README.md in 2013 in commit [fe35b9c8](https://github.com/coderjoe/jquery.liveaddress-gplv3/commit/fe35b9c81683642970195fd20c6042c551eb58de) by mholt.
+The internal LICENSE.md file was updated from MIT to GPLv3 in 2016 in commit [70807b5b](https://github.com/coderjoe/jquery.liveaddress-gplv3/commit/70807b5b197cfb45f4747fdd0c244da1754c398c) by mdwhatcott.
+
 LiveAddress API jQuery Plugin
 ==================================
 
